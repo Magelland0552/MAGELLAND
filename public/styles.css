@@ -334,6 +334,53 @@ input::placeholder {
   }
 }
 
+/* Fix mobile touch on Login and Create Account tabs */
+.tabs {
+  position: relative;
+  z-index: 10;
+  pointer-events: auto;
+}
+
+.tab {
+  position: relative;
+  z-index: 11;
+  min-height: 48px;
+  touch-action: manipulation;
+  pointer-events: auto;
+  -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
+}
+
+/* Keep the form and its controls touchable */
+.form-panel,
+.form-panel form {
+  position: relative;
+  pointer-events: auto;
+}
+
+.tab:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Prevent invisible elements from blocking the tabs */
+@media (max-width: 760px) {
+  .layout {
+    position: relative;
+    isolation: isolate;
+  }
+
+  .welcome {
+    display: none !important;
+    pointer-events: none;
+  }
+
+  .form-panel {
+    position: relative;
+    z-index: 1;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
