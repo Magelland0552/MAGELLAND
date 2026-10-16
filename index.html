@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b1220">
+  <title>MyAccount | Secure Sign In</title>
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/script.js" defer></script>
+</head>
+<body>
+  <main class="layout">
+    <aside class="welcome">
+      <div class="brand">
+        <div class="brand-icon">◆</div>
+        <span>MyAccount</span>
+      </div>
+
+      <div class="welcome-content">
+        <p class="eyebrow">YOUR ACCOUNT, YOUR SPACE</p>
+        <h1>Welcome to Magelland Ent .</h1>
+        <p>Sign in securely to continue to your website and access your services.</p>
+
+        <div class="benefits">
+          <div class="benefit"><span class="check">✓</span> Simple and secure account access</div>
+          <div class="benefit"><span class="check">✓</span> Your account details stay protected</div>
+          <div class="benefit"><span class="check">✓</span> Access from desktop or mobile</div>
+        </div>
+      </div>
+
+      <p class="welcome-footer">
+        Secure access to your account.<br>
+        © 2026 MyAccount. All rights reserved.
+      </p>
+    </aside>
+
+    <section class="form-panel">
+      <div class="mobile-brand">
+        <div class="brand-icon">◆</div>
+        <span>MyAccount</span>
+      </div>
+
+      <h2 id="heading">Welcome back</h2>
+      <p class="subtitle" id="subtitle">
+        Enter your details below to sign in to your account.
+      </p>
+
+      <div class="tabs" role="tablist" aria-label="Account options">
+        <button class="tab active" id="loginTab" type="button"
+          role="tab" aria-selected="true">Sign In</button>
+        <button class="tab" id="registerTab" type="button"
+          role="tab" aria-selected="false">Create Account</button>
+      </div>
+
+      <div id="message" class="message" role="status"
+        aria-live="polite"></div>
+
+      <form id="loginForm">
+        <div class="field">
+          <label for="loginEmail">Email address</label>
+          <input id="loginEmail" type="email" placeholder="you@example.com"
+            autocomplete="email" maxlength="254" required>
+        </div>
+
+        <div class="field">
+          <label for="loginPassword">Password</label>
+          <div class="input-wrap">
+            <input id="loginPassword" class="password-input"
+              type="password" placeholder="Enter your password"
+              autocomplete="current-password" required>
+            <button class="toggle-password" type="button"
+              data-target="loginPassword">Show</button>
+          </div>
+        </div>
+
+        <button class="primary-btn" type="submit">
+          Sign In to Your Account →
+        </button>
+      </form>
+
+      <form id="registerForm" class="hidden">
+        <div class="field">
+          <label for="registerEmail">Email address</label>
+          <input id="registerEmail" type="email" placeholder="you@example.com"
+            autocomplete="email" maxlength="254" required>
+        </div>
+
+        <div class="field">
+          <label for="registerPassword">Create password</label>
+          <div class="input-wrap">
+            <input id="registerPassword" class="password-input"
+              type="password" placeholder="At least 8 characters"
+              autocomplete="new-password" minlength="8" maxlength="72" required>
+            <button class="toggle-password" type="button"
+              data-target="registerPassword">Show</button>
+          </div>
+        </div>
+
+        <button class="primary-btn" type="submit">
+          Create My Account →
+        </button>
+      </form>
+
+      <div class="security-note">
+        <span>●</span> Account access protected by secure verification
+      </div>
+    </section>
+  </main>
+</body>
+</html>
